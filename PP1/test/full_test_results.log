@@ -1,0 +1,68 @@
+====================================
+::::::AIRPORT OPERATION TESTS:::::::
+====================================
+Compiling air_control with functions.c...
+-rw-r--r-- 1 angelramos angelramos 12 Nov  1 20:47 shm_pids_47307
+stat: cannot statx '/dev/shm/shm_pids_': No such file or directory
+Compiling ground_control (functions.c missing)...
+../ground_control/src/main.c: In function ‘main’:
+../ground_control/src/main.c:88:42: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 127 [-Wformat-truncation=]
+   88 |   snprintf(shm_name, sizeof(shm_name), "/%s", found);
+      |                                          ^~
+../ground_control/src/main.c:88:3: note: ‘snprintf’ output between 2 and 257 bytes into a destination of size 128
+   88 |   snprintf(shm_name, sizeof(shm_name), "/%s", found);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+====================================
+::::::::: Running C tests ::::::::::
+====================================
+========== Running AIR CONTROL (c) ==========
+Running ground_control...
+[1;33m1. VERIFY THREAD CREATION[0m
+   OS: Linux...
+   ✅ PASSED - buyer spawned 5 buyer threads Linux
+[1;33m2. Mutex validation[0m
+   ✅ PASSED - buyer create mutex
+finalization of operations...
+[1;33m3. Validate report result[0m
+   ❌ FAILED - No match in last output
+   Takeoff clearance 20
+:::: End of operations ::::
+Takeoffs: 20 Planes: 0
+air pid: 47662
+radio pid: 47676
+ground pid: 47663
+:::::::::::::::::::::::::::
+[1;33m4. Shared memory released[0m
+   ✅ PASSED - Shared memory segment released
+Checking shared memory...
+   ✅ Shared memory released
+====================================
+::::::::: Running py tests :::::::::
+====================================
+========== Running AIR CONTROL (py) ==========
+Running ground_control...
+[1;33m1. VERIFY THREAD CREATION[0m
+   OS: Linux...
+   ✅ PASSED - buyer spawned 5 buyer threads Linux
+[1;33m2. Mutex validation[0m
+   ✅ PASSED - buyer create mutex
+finalization of operations...
+[1;33m3. Validate report result[0m
+   ❌ FAILED - No match in last output
+   Takeoff clearance 20
+:::: End of operations ::::
+Takeoffs: 20 Planes: 0
+air pid: 47662
+radio pid: 47676
+ground pid: 47663
+:::::::::::::::::::::::::::
+[1;33m4. Shared memory released[0m
+   ✅ PASSED - Shared memory segment released
+Checking shared memory...
+   ✅ Shared memory released
+====================================
+FINAL RESULT:
+====================================
+[0;31m Tests passed: 6/8
+[0;31m Percentage: 75%
+❌ DEFICIENT - Most rules failed

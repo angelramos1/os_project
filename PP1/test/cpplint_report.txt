@@ -1,6 +1,6 @@
-Skipping input '../ground_control/include/functions.h': Can't open for reading
-Skipping input '../ground_control/src/functions.c': Can't open for reading
 Done processing ../air_control_c/include/functions.h
 Done processing ../air_control_c/src/functions.c
 Done processing ../air_control_c/src/main.c
+Done processing ../ground_control/include/functions.h
+Done processing ../ground_control/src/functions.c
 Done processing ../ground_control/src/main.c

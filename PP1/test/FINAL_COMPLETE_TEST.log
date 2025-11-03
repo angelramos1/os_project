@@ -1,0 +1,25 @@
+====================================
+::::::AIRPORT OPERATION TESTS:::::::
+====================================
+Compiling air_control with functions.c...
+-rw-r--r-- 1 angelramos angelramos 12 Nov  1 21:11 shm_pids_47307
+stat: cannot statx '/dev/shm/shm_pids_': No such file or directory
+Compiling ground_control (functions.c missing)...
+../ground_control/src/main.c: In function ‘main’:
+../ground_control/src/main.c:47:42: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 127 [-Wformat-truncation=]
+   47 |   snprintf(shm_name, sizeof(shm_name), "/%s", found);
+      |                                          ^~
+../ground_control/src/main.c:47:3: note: ‘snprintf’ output between 2 and 257 bytes into a destination of size 128
+   47 |   snprintf(shm_name, sizeof(shm_name), "/%s", found);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+====================================
+::::::::: Running C tests ::::::::::
+====================================
+========== Running AIR CONTROL (c) ==========
+Running ground_control...
+[1;33m1. VERIFY THREAD CREATION[0m
+   OS: Linux...
+   ✅ PASSED - buyer spawned 5 buyer threads Linux
+[1;33m2. Mutex validation[0m
+   ✅ PASSED - buyer create mutex
+finalization of operations...

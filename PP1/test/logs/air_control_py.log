@@ -1,0 +1,24 @@
+radio pid: 57309
+Planes: 5
+Planes: 10
+RUNWAY OVERLOADED!!!! 
+Planes: 15
+RUNWAY OVERLOADED!!!! 
+Planes: 20
+RUNWAY OVERLOADED!!!! 
+Takeoff clearance 5
+Takeoff clearance 10
+Takeoff clearance 15
+Takeoff clearance 20
+:::: End of operations ::::
+Takeoffs: 20 Planes: 20
+air pid: 57307
+radio pid: 57309
+ground pid: 57352
+:::::::::::::::::::::::::::
+Traceback (most recent call last):
+  File "/mnt/c/Users/frank/Documents/Project_OS/os_project/PP1/test/../air_control_py/main.py", line 180, in <module>
+    main()
+  File "/mnt/c/Users/frank/Documents/Project_OS/os_project/PP1/test/../air_control_py/main.py", line 174, in main
+    memory.close()
+BufferError: cannot close exported pointers exist
